@@ -1,0 +1,32 @@
+/* Garante que o fundo cubra toda a tela */
+html, body {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+/* Ajuste do layout principal */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Define o fundo do conteúdo para cobrir toda a página */
+.main-content {
+  margin-top: 80px;
+  flex-grow: 1;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 0; /* Quando a Sidebar está fechada */
+}
+
+/* Quando o sidebar estiver aberto, empurra o conteúdo */
+.main-content.sidebar-open {
+  margin-left: 300px; /* Empurra o conteúdo para a direita */
+}
+.content-wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

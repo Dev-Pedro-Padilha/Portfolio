@@ -1,17 +1,39 @@
-// src/components/Sidebar.jsx
-import React from 'react'
-import './Sidebar.css'
+import React, {useContext} from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import "./Sidebar.css";
+import { FaCreditCard, FaTools, FaClipboardList, FaCubes, FaUsers, FaThLarge, FaSignOutAlt, FaSignInAlt } from "react-icons/fa";
 
-export default function Sidebar() {
+
+const Sidebar = ({ isOpen }) => {
+
+  const navigate = useNavigate();
+
   return (
-    <aside className="sidebar">
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </aside>
-  )
-}
+    <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
+      <div className="sidebar-user">
+        <img src="" alt="User" className="sidebar-avatar"></img>
+        <div className="sidebar-user-info">
+          <strong>Pedro</strong>
+          <small>Engenharia</small>
+        </div>
+      </div>
+
+      <div className="sidebar-links">
+        <NavLink to="https://github.com/Dev-Pedro-Padilha/ViewProducao" className={({ isActive }) => isActive ? "active" : ""}>
+          <p><FaCreditCard /> Sistema de Visualização de Produção</p>
+        </NavLink>
+
+        <NavLink to="https://github.com/Dev-Pedro-Padilha/DAOC" className={({ isActive }) => isActive ? "active" : ""}>
+          <p><FaCreditCard /> Projeto para a cadeira DAOC</p>
+        </NavLink>
+
+        <NavLink to="https://github.com/Dev-Pedro-Padilha/login-flutter" className={({ isActive }) => isActive ? "active" : ""}>
+          <p><FaCreditCard /> Tela de Login e Home com Flutter</p>
+        </NavLink>
+      </div>
+
+    </div>
+  );
+};
+
+export default Sidebar;
