@@ -1,0 +1,71 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card-home {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-home:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-home h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.card-home p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-icon {
+  color: #2d7ff9;
+  margin-bottom: 0.5rem;
+}
+/* Footer do sidebar com botão logout */
+.card-footer {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+.btn-footer {
+  width: 100%;
+  background-color: transparent;
+  color: #4ad32f;
+  font-weight: 500;
+  padding: 10px;
+  border: 1px solid #4ad32f;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.btn-footer:hover {
+  background-color: #34d32f;
+  color: white;
+}

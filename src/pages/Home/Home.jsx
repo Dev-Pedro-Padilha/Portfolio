@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="layout">
       <Header toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} />
       <main className={`main-content${isSidebarOpen ? " sidebar-open" : ""}`}>        

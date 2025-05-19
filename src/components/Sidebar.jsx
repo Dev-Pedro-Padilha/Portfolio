@@ -19,6 +19,13 @@ const Sidebar = ({ isOpen }) => {
       </div>
 
       <div className="sidebar-links">
+
+        <NavLink to="info" className={({ isActive }) => isActive ? "active" : ""}>
+          <p><FaCreditCard /> Informações</p>
+        </NavLink>
+        <NavLink to="projetos" className={({ isActive }) => isActive ? "active" : ""}>
+          <p><FaCreditCard /> Projetos</p>
+        </NavLink>
         <NavLink to="https://github.com/Dev-Pedro-Padilha/ViewProducao" className={({ isActive }) => isActive ? "active" : ""}>
           <p><FaCreditCard /> Sistema de Visualização de Produção</p>
         </NavLink>

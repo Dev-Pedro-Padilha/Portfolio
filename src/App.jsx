@@ -1,8 +1,9 @@
 import { useEffect } from "react"
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import Info from "./pages/Info/Info";
+import Projetos from "./pages/Projetos/Projetos";
 
 const App = () => {
   useEffect(() => {
@@ -10,13 +11,15 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home/>}>
-          <Route path="/info" element={<Info/>}/>
+          <Route index element={<Info/>}/>
+          <Route path="info" element={<Info/>}/>
+          <Route path="projetos" element={<Projetos/>}/>
         </Route>
       </Routes>
-    </Router>
+    </HashRouter>
   )
 }
 
